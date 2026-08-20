@@ -1,0 +1,1676 @@
+{
+  "timestamp": "2026-08-20T01:33:44",
+  "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "retrieval_min_score": 0.78,
+  "collection_count": 149,
+  "precision_at_k": {
+    "3": {
+      "precision": 0.5789,
+      "correct": 11,
+      "total": 19,
+      "details": [
+        {
+          "question": "What are the diagnostic criteria for bipolar disorder?",
+          "expected": "2.3.1",
+          "retrieved": [
+            "2.3.1",
+            "11.3",
+            "2.3.3"
+          ],
+          "top_score": 0.8055,
+          "found": true
+        },
+        {
+          "question": "How is bipolar disorder distinguished from other diagnoses?",
+          "expected": "2.3.3",
+          "retrieved": [
+            "2.3.3",
+            "2.3.5",
+            "2.1.2"
+          ],
+          "top_score": 0.8357,
+          "found": true
+        },
+        {
+          "question": "What comorbidities are associated with bipolar disorder?",
+          "expected": "2.3.5",
+          "retrieved": [
+            "2.3.5",
+            "2.1.2",
+            "2.5.2"
+          ],
+          "top_score": 0.8018,
+          "found": true
+        },
+        {
+          "question": "What are the early warning signs of bipolar disorder relapse?",
+          "expected": "2.5.1",
+          "retrieved": [
+            "2.5",
+            "2.1.2",
+            "7.3.1"
+          ],
+          "top_score": 0.7398,
+          "found": false
+        },
+        {
+          "question": "What written information should be given to carers?",
+          "expected": "1.1.14",
+          "retrieved": [
+            "1.1.14",
+            "4.2.2",
+            "4.1"
+          ],
+          "top_score": 0.6065,
+          "found": true
+        },
+        {
+          "question": "What themes did carers identify as improving their experience?",
+          "expected": "4.2.2",
+          "retrieved": [
+            "4.2.2",
+            "4.1",
+            "4.3.2"
+          ],
+          "top_score": 0.6955,
+          "found": true
+        },
+        {
+          "question": "What should happen immediately after a patient assessment?",
+          "expected": "5.4",
+          "retrieved": [
+            "5.4",
+            "5.2.3",
+            "11.4"
+          ],
+          "top_score": 0.5163,
+          "found": true
+        },
+        {
+          "question": "What are the clinical practice recommendations for case identification?",
+          "expected": "5.6.1",
+          "retrieved": [
+            "5.2.1",
+            "5.2.4",
+            "2.3.4"
+          ],
+          "top_score": 0.489,
+          "found": false
+        },
+        {
+          "question": "What medication is recommended for acute mania?",
+          "expected": "6.1",
+          "retrieved": [
+            "2.6.3",
+            "6.2.4",
+            "6.1"
+          ],
+          "top_score": 0.7519,
+          "found": true
+        },
+        {
+          "question": "What did the network meta-analysis find about pharmacological interventions?",
+          "expected": "6.3.4",
+          "retrieved": [
+            "6.3.3",
+            "10.5.1",
+            "6.4.5"
+          ],
+          "top_score": 0.5971,
+          "found": false
+        },
+        {
+          "question": "What nutritional interventions help with acute bipolar episodes?",
+          "expected": "6.3.7",
+          "retrieved": [
+            "6.3.1",
+            "11.3",
+            "7.1"
+          ],
+          "top_score": 0.7303,
+          "found": false
+        },
+        {
+          "question": "What is the trade-off between clinical benefits and harms in long-term management?",
+          "expected": "7.5.2",
+          "retrieved": [
+            "6.5.2",
+            "4.3.2",
+            "8.2"
+          ],
+          "top_score": 0.6407,
+          "found": false
+        },
+        {
+          "question": "What are the research recommendations for long-term bipolar management?",
+          "expected": "7.6.2",
+          "retrieved": [
+            "7.1",
+            "7.6.1",
+            "11.7"
+          ],
+          "top_score": 0.8385,
+          "found": false
+        },
+        {
+          "question": "What is the clinical evidence for psychological interventions?",
+          "expected": "8.1.3",
+          "retrieved": [
+            "2.6.4",
+            "11.6",
+            "10.6.4"
+          ],
+          "top_score": 0.7002,
+          "found": false
+        },
+        {
+          "question": "What clinical practice recommendations exist for monitoring physical health?",
+          "expected": "9.4.1",
+          "retrieved": [
+            "9.4.1",
+            "9.3.3",
+            "11.8"
+          ],
+          "top_score": 0.6482,
+          "found": true
+        },
+        {
+          "question": "What health economics evidence exists for treating children with bipolar disorder?",
+          "expected": "10.4.5",
+          "retrieved": [
+            "10.7.3",
+            "10.3.6",
+            "10.4.5"
+          ],
+          "top_score": 0.8045,
+          "found": true
+        },
+        {
+          "question": "What is the risk of bias in studies on children and young people with bipolar disorder?",
+          "expected": "10.3.4",
+          "retrieved": [
+            "2.4",
+            "2.2.1",
+            "10.7.3"
+          ],
+          "top_score": 0.7826,
+          "found": false
+        },
+        {
+          "question": "How should mania or hypomania be managed in adults?",
+          "expected": "11.5",
+          "retrieved": [
+            "11.5",
+            "6.6.1",
+            "6.2.1"
+          ],
+          "top_score": 0.7883,
+          "found": true
+        },
+        {
+          "question": "How should medication be used for bipolar disorder?",
+          "expected": "11.10",
+          "retrieved": [
+            "11.10",
+            "2.6.3",
+            "7.1"
+          ],
+          "top_score": 0.8032,
+          "found": true
+        }
+      ]
+    },
+    "5": {
+      "precision": 0.6316,
+      "correct": 12,
+      "total": 19,
+      "details": [
+        {
+          "question": "What are the diagnostic criteria for bipolar disorder?",
+          "expected": "2.3.1",
+          "retrieved": [
+            "2.3.1",
+            "11.3",
+            "2.3.3",
+            "2.4",
+            "2.1.2"
+          ],
+          "top_score": 0.8055,
+          "found": true
+        },
+        {
+          "question": "How is bipolar disorder distinguished from other diagnoses?",
+          "expected": "2.3.3",
+          "retrieved": [
+            "2.3.3",
+            "2.3.5",
+            "2.1.2",
+            "2.4",
+            "2.3.1"
+          ],
+          "top_score": 0.8357,
+          "found": true
+        },
+        {
+          "question": "What comorbidities are associated with bipolar disorder?",
+          "expected": "2.3.5",
+          "retrieved": [
+            "2.3.5",
+            "2.1.2",
+            "2.5.2",
+            "2.3.3",
+            "2.2"
+          ],
+          "top_score": 0.8018,
+          "found": true
+        },
+        {
+          "question": "What are the early warning signs of bipolar disorder relapse?",
+          "expected": "2.5.1",
+          "retrieved": [
+            "2.5",
+            "2.1.2",
+            "7.3.1",
+            "2.5.3",
+            "2.4"
+          ],
+          "top_score": 0.7398,
+          "found": false
+        },
+        {
+          "question": "What written information should be given to carers?",
+          "expected": "1.1.14",
+          "retrieved": [
+            "1.1.14",
+            "4.2.2",
+            "4.1",
+            "1.1.16",
+            "1.1.13"
+          ],
+          "top_score": 0.6065,
+          "found": true
+        },
+        {
+          "question": "What themes did carers identify as improving their experience?",
+          "expected": "4.2.2",
+          "retrieved": [
+            "4.2.2",
+            "4.1",
+            "4.3.2",
+            "1.1.14",
+            "1.1.18"
+          ],
+          "top_score": 0.6955,
+          "found": true
+        },
+        {
+          "question": "What should happen immediately after a patient assessment?",
+          "expected": "5.4",
+          "retrieved": [
+            "5.4",
+            "5.2.3",
+            "11.4",
+            "6.5.4",
+            "11.2"
+          ],
+          "top_score": 0.5163,
+          "found": true
+        },
+        {
+          "question": "What are the clinical practice recommendations for case identification?",
+          "expected": "5.6.1",
+          "retrieved": [
+            "5.2.1",
+            "5.2.4",
+            "2.3.4",
+            "5.1",
+            "6.4.1"
+          ],
+          "top_score": 0.489,
+          "found": false
+        },
+        {
+          "question": "What medication is recommended for acute mania?",
+          "expected": "6.1",
+          "retrieved": [
+            "2.6.3",
+            "6.2.4",
+            "6.1",
+            "6.2.1",
+            "10.7.5"
+          ],
+          "top_score": 0.7519,
+          "found": true
+        },
+        {
+          "question": "What did the network meta-analysis find about pharmacological interventions?",
+          "expected": "6.3.4",
+          "retrieved": [
+            "6.3.3",
+            "10.5.1",
+            "6.4.5",
+            "7.4.7",
+            "6.4.2"
+          ],
+          "top_score": 0.5971,
+          "found": false
+        },
+        {
+          "question": "What nutritional interventions help with acute bipolar episodes?",
+          "expected": "6.3.7",
+          "retrieved": [
+            "6.3.1",
+            "11.3",
+            "7.1",
+            "2.6.1",
+            "8.3.1"
+          ],
+          "top_score": 0.7303,
+          "found": false
+        },
+        {
+          "question": "What is the trade-off between clinical benefits and harms in long-term management?",
+          "expected": "7.5.2",
+          "retrieved": [
+            "6.5.2",
+            "4.3.2",
+            "8.2",
+            "7.5.2",
+            "7.5.1"
+          ],
+          "top_score": 0.6407,
+          "found": true
+        },
+        {
+          "question": "What are the research recommendations for long-term bipolar management?",
+          "expected": "7.6.2",
+          "retrieved": [
+            "7.1",
+            "7.6.1",
+            "11.7",
+            "7.5.1",
+            "7.5.5"
+          ],
+          "top_score": 0.8385,
+          "found": false
+        },
+        {
+          "question": "What is the clinical evidence for psychological interventions?",
+          "expected": "8.1.3",
+          "retrieved": [
+            "2.6.4",
+            "11.6",
+            "10.6.4",
+            "8.1",
+            "8.1.4"
+          ],
+          "top_score": 0.7002,
+          "found": false
+        },
+        {
+          "question": "What clinical practice recommendations exist for monitoring physical health?",
+          "expected": "9.4.1",
+          "retrieved": [
+            "9.4.1",
+            "9.3.3",
+            "11.8",
+            "6.4.1",
+            "10.5.1"
+          ],
+          "top_score": 0.6482,
+          "found": true
+        },
+        {
+          "question": "What health economics evidence exists for treating children with bipolar disorder?",
+          "expected": "10.4.5",
+          "retrieved": [
+            "10.7.3",
+            "10.3.6",
+            "10.4.5",
+            "2.4",
+            "10.6.5"
+          ],
+          "top_score": 0.8045,
+          "found": true
+        },
+        {
+          "question": "What is the risk of bias in studies on children and young people with bipolar disorder?",
+          "expected": "10.3.4",
+          "retrieved": [
+            "2.4",
+            "2.2.1",
+            "10.7.3",
+            "11.11",
+            "5.1"
+          ],
+          "top_score": 0.7826,
+          "found": false
+        },
+        {
+          "question": "How should mania or hypomania be managed in adults?",
+          "expected": "11.5",
+          "retrieved": [
+            "11.5",
+            "6.6.1",
+            "6.2.1",
+            "11.3",
+            "10.1"
+          ],
+          "top_score": 0.7883,
+          "found": true
+        },
+        {
+          "question": "How should medication be used for bipolar disorder?",
+          "expected": "11.10",
+          "retrieved": [
+            "11.10",
+            "2.6.3",
+            "7.1",
+            "6.1",
+            "6.6.2"
+          ],
+          "top_score": 0.8032,
+          "found": true
+        }
+      ]
+    },
+    "10": {
+      "precision": 0.6842,
+      "correct": 13,
+      "total": 19,
+      "details": [
+        {
+          "question": "What are the diagnostic criteria for bipolar disorder?",
+          "expected": "2.3.1",
+          "retrieved": [
+            "2.3.1",
+            "11.3",
+            "2.3.3",
+            "2.4",
+            "2.1.2",
+            "2.3.5",
+            "6.3.1",
+            "2.6.1",
+            "5.6.1",
+            "11.11"
+          ],
+          "top_score": 0.8055,
+          "found": true
+        },
+        {
+          "question": "How is bipolar disorder distinguished from other diagnoses?",
+          "expected": "2.3.3",
+          "retrieved": [
+            "2.3.3",
+            "2.3.5",
+            "2.1.2",
+            "2.4",
+            "2.3.1",
+            "2.5.2",
+            "2.2",
+            "2.1.1",
+            "11.3",
+            "2.5"
+          ],
+          "top_score": 0.8357,
+          "found": true
+        },
+        {
+          "question": "What comorbidities are associated with bipolar disorder?",
+          "expected": "2.3.5",
+          "retrieved": [
+            "2.3.5",
+            "2.1.2",
+            "2.5.2",
+            "2.3.3",
+            "2.2",
+            "6.3.1",
+            "2.5",
+            "2.1.1",
+            "2.5.3",
+            "2.4"
+          ],
+          "top_score": 0.8018,
+          "found": true
+        },
+        {
+          "question": "What are the early warning signs of bipolar disorder relapse?",
+          "expected": "2.5.1",
+          "retrieved": [
+            "2.5",
+            "2.1.2",
+            "7.3.1",
+            "2.5.3",
+            "2.4",
+            "6.3.4",
+            "2.3.3",
+            "2.3.5",
+            "2.5.1",
+            "6.3.1"
+          ],
+          "top_score": 0.7398,
+          "found": true
+        },
+        {
+          "question": "What written information should be given to carers?",
+          "expected": "1.1.14",
+          "retrieved": [
+            "1.1.14",
+            "4.2.2",
+            "4.1",
+            "1.1.16",
+            "1.1.13",
+            "4.3.2",
+            "1.1.17",
+            "4.3.1",
+            "5.4",
+            "1.1.18"
+          ],
+          "top_score": 0.6065,
+          "found": true
+        },
+        {
+          "question": "What themes did carers identify as improving their experience?",
+          "expected": "4.2.2",
+          "retrieved": [
+            "4.2.2",
+            "4.1",
+            "4.3.2",
+            "1.1.14",
+            "1.1.18",
+            "4.3.1",
+            "1.1.17",
+            "1.1.13",
+            "4.2.1",
+            "1.1.16"
+          ],
+          "top_score": 0.6955,
+          "found": true
+        },
+        {
+          "question": "What should happen immediately after a patient assessment?",
+          "expected": "5.4",
+          "retrieved": [
+            "5.4",
+            "5.2.3",
+            "11.4",
+            "6.5.4",
+            "11.2",
+            "6.5.2",
+            "8.2",
+            "5.5.1",
+            "5.3.3",
+            "2.5.1"
+          ],
+          "top_score": 0.5163,
+          "found": true
+        },
+        {
+          "question": "What are the clinical practice recommendations for case identification?",
+          "expected": "5.6.1",
+          "retrieved": [
+            "5.2.1",
+            "5.2.4",
+            "2.3.4",
+            "5.1",
+            "6.4.1",
+            "5.2.3",
+            "6.5.4",
+            "11.4",
+            "9.4.1",
+            "4.2.1"
+          ],
+          "top_score": 0.489,
+          "found": false
+        },
+        {
+          "question": "What medication is recommended for acute mania?",
+          "expected": "6.1",
+          "retrieved": [
+            "2.6.3",
+            "6.2.4",
+            "6.1",
+            "6.2.1",
+            "10.7.5",
+            "6.5.3",
+            "11.3",
+            "7.4.1",
+            "11.5",
+            "6.6.2"
+          ],
+          "top_score": 0.7519,
+          "found": true
+        },
+        {
+          "question": "What did the network meta-analysis find about pharmacological interventions?",
+          "expected": "6.3.4",
+          "retrieved": [
+            "6.3.3",
+            "10.5.1",
+            "6.4.5",
+            "7.4.7",
+            "6.4.2",
+            "6.3.8",
+            "8.2",
+            "6.5.2",
+            "6.2.2",
+            "10.3.1"
+          ],
+          "top_score": 0.5971,
+          "found": false
+        },
+        {
+          "question": "What nutritional interventions help with acute bipolar episodes?",
+          "expected": "6.3.7",
+          "retrieved": [
+            "6.3.1",
+            "11.3",
+            "7.1",
+            "2.6.1",
+            "8.3.1",
+            "9.1",
+            "9.2.1",
+            "11.6",
+            "4.4.1",
+            "2.6.4"
+          ],
+          "top_score": 0.7303,
+          "found": false
+        },
+        {
+          "question": "What is the trade-off between clinical benefits and harms in long-term management?",
+          "expected": "7.5.2",
+          "retrieved": [
+            "6.5.2",
+            "4.3.2",
+            "8.2",
+            "7.5.2",
+            "7.5.1",
+            "9.3.2",
+            "9.3.3",
+            "6.4.5",
+            "10.7.1",
+            "4.3.3"
+          ],
+          "top_score": 0.6407,
+          "found": true
+        },
+        {
+          "question": "What are the research recommendations for long-term bipolar management?",
+          "expected": "7.6.2",
+          "retrieved": [
+            "7.1",
+            "7.6.1",
+            "11.7",
+            "7.5.1",
+            "7.5.5",
+            "8.3.1",
+            "5.6.1",
+            "2.6.1",
+            "6.5.5",
+            "7.4.7"
+          ],
+          "top_score": 0.8385,
+          "found": false
+        },
+        {
+          "question": "What is the clinical evidence for psychological interventions?",
+          "expected": "8.1.3",
+          "retrieved": [
+            "2.6.4",
+            "11.6",
+            "10.6.4",
+            "8.1",
+            "8.1.4",
+            "9.2.2",
+            "4.2.1",
+            "10.8.2",
+            "4.2.2",
+            "9.3.3"
+          ],
+          "top_score": 0.7002,
+          "found": false
+        },
+        {
+          "question": "What clinical practice recommendations exist for monitoring physical health?",
+          "expected": "9.4.1",
+          "retrieved": [
+            "9.4.1",
+            "9.3.3",
+            "11.8",
+            "6.4.1",
+            "10.5.1",
+            "9.3.1",
+            "9.2.2",
+            "6.4.2",
+            "9.3.5",
+            "6.6.1"
+          ],
+          "top_score": 0.6482,
+          "found": true
+        },
+        {
+          "question": "What health economics evidence exists for treating children with bipolar disorder?",
+          "expected": "10.4.5",
+          "retrieved": [
+            "10.7.3",
+            "10.3.6",
+            "10.4.5",
+            "2.4",
+            "10.6.5",
+            "10.1",
+            "10.8.1",
+            "10.5.5",
+            "11.3",
+            "8.1.4"
+          ],
+          "top_score": 0.8045,
+          "found": true
+        },
+        {
+          "question": "What is the risk of bias in studies on children and young people with bipolar disorder?",
+          "expected": "10.3.4",
+          "retrieved": [
+            "2.4",
+            "2.2.1",
+            "10.7.3",
+            "11.11",
+            "5.1",
+            "10.3.3",
+            "10.1",
+            "10.8.1",
+            "2.2.6",
+            "2.3.5"
+          ],
+          "top_score": 0.7826,
+          "found": false
+        },
+        {
+          "question": "How should mania or hypomania be managed in adults?",
+          "expected": "11.5",
+          "retrieved": [
+            "11.5",
+            "6.6.1",
+            "6.2.1",
+            "11.3",
+            "10.1",
+            "4.3.5",
+            "11.7",
+            "7.1",
+            "10.8.1",
+            "1.1.18"
+          ],
+          "top_score": 0.7883,
+          "found": true
+        },
+        {
+          "question": "How should medication be used for bipolar disorder?",
+          "expected": "11.10",
+          "retrieved": [
+            "11.10",
+            "2.6.3",
+            "7.1",
+            "6.1",
+            "6.6.2",
+            "6.3.1",
+            "2.6.1",
+            "11.3",
+            "6.3.6",
+            "8.3.1"
+          ],
+          "top_score": 0.8032,
+          "found": true
+        }
+      ]
+    }
+  },
+  "precision_at_k_arabic": {
+    "3": {
+      "precision": 0.3684,
+      "correct": 7,
+      "total": 19,
+      "details": [
+        {
+          "question": "ما هي معايير تشخيص اضطراب ثنائي القطب؟",
+          "expected": "2.3.1",
+          "retrieved": [
+            "2.3.1",
+            "10.6.2",
+            "2.3.4"
+          ],
+          "top_score": 0.615,
+          "found": true
+        },
+        {
+          "question": "كيف يتم تمييز اضطراب ثنائي القطب عن التشخيصات الأخرى؟",
+          "expected": "2.3.3",
+          "retrieved": [
+            "10.6.2",
+            "2.3.1",
+            "5.2.3"
+          ],
+          "top_score": 0.6383,
+          "found": false
+        },
+        {
+          "question": "ما هي الأمراض المصاحبة المرتبطة باضطراب ثنائي القطب؟",
+          "expected": "2.3.5",
+          "retrieved": [
+            "2.2.1",
+            "2.2",
+            "2.1.3"
+          ],
+          "top_score": 0.4889,
+          "found": false
+        },
+        {
+          "question": "ما هي العلامات المبكرة لانتكاسة اضطراب ثنائي القطب؟",
+          "expected": "2.5.1",
+          "retrieved": [
+            "2.5.1",
+            "2.2.1",
+            "2.2.2"
+          ],
+          "top_score": 0.563,
+          "found": true
+        },
+        {
+          "question": "ما المعلومات المكتوبة التي يجب تقديمها لمقدمي الرعاية؟",
+          "expected": "1.1.14",
+          "retrieved": [
+            "1.1.14",
+            "4.2.2",
+            "4.1"
+          ],
+          "top_score": 0.5594,
+          "found": true
+        },
+        {
+          "question": "ما المحاور التي حددها مقدمو الرعاية لتحسين تجربتهم؟",
+          "expected": "4.2.2",
+          "retrieved": [
+            "4.1",
+            "4.2.2",
+            "4.3.2"
+          ],
+          "top_score": 0.6811,
+          "found": true
+        },
+        {
+          "question": "ماذا يجب أن يحدث مباشرة بعد تقييم المريض؟",
+          "expected": "5.4",
+          "retrieved": [
+            "5.4",
+            "5.2.3",
+            "8.2"
+          ],
+          "top_score": 0.5549,
+          "found": true
+        },
+        {
+          "question": "ما هي توصيات الممارسة السريرية لتحديد الحالات؟",
+          "expected": "5.6.1",
+          "retrieved": [
+            "6.4.1",
+            "11.4",
+            "6.6.1"
+          ],
+          "top_score": 0.5794,
+          "found": false
+        },
+        {
+          "question": "ما هو الدواء الموصى به لنوبة الهوس الحادة؟",
+          "expected": "6.1",
+          "retrieved": [
+            "2.6.3",
+            "6.2.1",
+            "6.2.4"
+          ],
+          "top_score": 0.6317,
+          "found": false
+        },
+        {
+          "question": "ماذا وجد التحليل التلوي الشبكي بخصوص التدخلات الدوائية؟",
+          "expected": "6.3.4",
+          "retrieved": [
+            "6.4.5",
+            "10.5.1",
+            "6.3.8"
+          ],
+          "top_score": 0.6008,
+          "found": false
+        },
+        {
+          "question": "ما هي التدخلات الغذائية التي تساعد في نوبات ثنائي القطب الحادة؟",
+          "expected": "6.3.7",
+          "retrieved": [
+            "9.3.5",
+            "6.4.1",
+            "9.3.2"
+          ],
+          "top_score": 0.4307,
+          "found": false
+        },
+        {
+          "question": "ما هي المفاضلة بين الفوائد والأضرار السريرية في الإدارة طويلة المدى؟",
+          "expected": "7.5.2",
+          "retrieved": [
+            "4.3.2",
+            "6.5.2",
+            "8.2"
+          ],
+          "top_score": 0.588,
+          "found": false
+        },
+        {
+          "question": "ما هي توصيات البحث للإدارة طويلة المدى لثنائي القطب؟",
+          "expected": "7.6.2",
+          "retrieved": [
+            "10.5.1",
+            "7.5.4",
+            "7.5.1"
+          ],
+          "top_score": 0.5695,
+          "found": false
+        },
+        {
+          "question": "ما هو الدليل السريري على التدخلات النفسية؟",
+          "expected": "8.1.3",
+          "retrieved": [
+            "2.6.4",
+            "8.1",
+            "11.6"
+          ],
+          "top_score": 0.6895,
+          "found": false
+        },
+        {
+          "question": "ما هي توصيات الممارسة السريرية لمراقبة الصحة الجسدية؟",
+          "expected": "9.4.1",
+          "retrieved": [
+            "9.4.1",
+            "6.4.1",
+            "9.3.3"
+          ],
+          "top_score": 0.6262,
+          "found": true
+        },
+        {
+          "question": "ما الأدلة الاقتصادية الصحية بخصوص علاج الأطفال المصابين بثنائي القطب؟",
+          "expected": "10.4.5",
+          "retrieved": [
+            "10.3.6",
+            "10.7.3",
+            "9.3.3"
+          ],
+          "top_score": 0.596,
+          "found": false
+        },
+        {
+          "question": "ما هو خطر التحيز في الدراسات الخاصة بالأطفال واليافعين المصابين بثنائي القطب؟",
+          "expected": "10.3.4",
+          "retrieved": [
+            "6.3.5",
+            "7.4.4",
+            "8.1.3"
+          ],
+          "top_score": 0.6305,
+          "found": false
+        },
+        {
+          "question": "كيف تتم إدارة الهوس أو الهوس الخفيف لدى البالغين؟",
+          "expected": "11.5",
+          "retrieved": [
+            "11.5",
+            "6.2.1",
+            "10.7.2"
+          ],
+          "top_score": 0.563,
+          "found": true
+        },
+        {
+          "question": "كيف يجب استخدام الدواء لعلاج اضطراب ثنائي القطب؟",
+          "expected": "11.10",
+          "retrieved": [
+            "2.6.3",
+            "6.4.1",
+            "6.6.2"
+          ],
+          "top_score": 0.6397,
+          "found": false
+        }
+      ]
+    },
+    "5": {
+      "precision": 0.6316,
+      "correct": 12,
+      "total": 19,
+      "details": [
+        {
+          "question": "ما هي معايير تشخيص اضطراب ثنائي القطب؟",
+          "expected": "2.3.1",
+          "retrieved": [
+            "2.3.1",
+            "10.6.2",
+            "2.3.4",
+            "5.2.1",
+            "9.4.1"
+          ],
+          "top_score": 0.615,
+          "found": true
+        },
+        {
+          "question": "كيف يتم تمييز اضطراب ثنائي القطب عن التشخيصات الأخرى؟",
+          "expected": "2.3.3",
+          "retrieved": [
+            "10.6.2",
+            "2.3.1",
+            "5.2.3",
+            "2.3.3",
+            "5.5.1"
+          ],
+          "top_score": 0.6383,
+          "found": true
+        },
+        {
+          "question": "ما هي الأمراض المصاحبة المرتبطة باضطراب ثنائي القطب؟",
+          "expected": "2.3.5",
+          "retrieved": [
+            "2.2.1",
+            "2.2",
+            "2.1.3",
+            "2.3.5",
+            "10.6.2"
+          ],
+          "top_score": 0.4889,
+          "found": true
+        },
+        {
+          "question": "ما هي العلامات المبكرة لانتكاسة اضطراب ثنائي القطب؟",
+          "expected": "2.5.1",
+          "retrieved": [
+            "2.5.1",
+            "2.2.1",
+            "2.2.2",
+            "10.6.2",
+            "2.5.2"
+          ],
+          "top_score": 0.563,
+          "found": true
+        },
+        {
+          "question": "ما المعلومات المكتوبة التي يجب تقديمها لمقدمي الرعاية؟",
+          "expected": "1.1.14",
+          "retrieved": [
+            "1.1.14",
+            "4.2.2",
+            "4.1",
+            "1.1.16",
+            "4.3.2"
+          ],
+          "top_score": 0.5594,
+          "found": true
+        },
+        {
+          "question": "ما المحاور التي حددها مقدمو الرعاية لتحسين تجربتهم؟",
+          "expected": "4.2.2",
+          "retrieved": [
+            "4.1",
+            "4.2.2",
+            "4.3.2",
+            "1.1.18",
+            "4.2.1"
+          ],
+          "top_score": 0.6811,
+          "found": true
+        },
+        {
+          "question": "ماذا يجب أن يحدث مباشرة بعد تقييم المريض؟",
+          "expected": "5.4",
+          "retrieved": [
+            "5.4",
+            "5.2.3",
+            "8.2",
+            "11.4",
+            "6.5.2"
+          ],
+          "top_score": 0.5549,
+          "found": true
+        },
+        {
+          "question": "ما هي توصيات الممارسة السريرية لتحديد الحالات؟",
+          "expected": "5.6.1",
+          "retrieved": [
+            "6.4.1",
+            "11.4",
+            "6.6.1",
+            "6.5.4",
+            "6.4.5"
+          ],
+          "top_score": 0.5794,
+          "found": false
+        },
+        {
+          "question": "ما هو الدواء الموصى به لنوبة الهوس الحادة؟",
+          "expected": "6.1",
+          "retrieved": [
+            "2.6.3",
+            "6.2.1",
+            "6.2.4",
+            "11.5",
+            "6.1"
+          ],
+          "top_score": 0.6317,
+          "found": true
+        },
+        {
+          "question": "ماذا وجد التحليل التلوي الشبكي بخصوص التدخلات الدوائية؟",
+          "expected": "6.3.4",
+          "retrieved": [
+            "6.4.5",
+            "10.5.1",
+            "6.3.8",
+            "6.3.3",
+            "6.5.2"
+          ],
+          "top_score": 0.6008,
+          "found": false
+        },
+        {
+          "question": "ما هي التدخلات الغذائية التي تساعد في نوبات ثنائي القطب الحادة؟",
+          "expected": "6.3.7",
+          "retrieved": [
+            "9.3.5",
+            "6.4.1",
+            "9.3.2",
+            "9.3.1",
+            "9.3.3"
+          ],
+          "top_score": 0.4307,
+          "found": false
+        },
+        {
+          "question": "ما هي المفاضلة بين الفوائد والأضرار السريرية في الإدارة طويلة المدى؟",
+          "expected": "7.5.2",
+          "retrieved": [
+            "4.3.2",
+            "6.5.2",
+            "8.2",
+            "4.3.1",
+            "7.5.1"
+          ],
+          "top_score": 0.588,
+          "found": false
+        },
+        {
+          "question": "ما هي توصيات البحث للإدارة طويلة المدى لثنائي القطب؟",
+          "expected": "7.6.2",
+          "retrieved": [
+            "10.5.1",
+            "7.5.4",
+            "7.5.1",
+            "7.6.1",
+            "7.4.7"
+          ],
+          "top_score": 0.5695,
+          "found": false
+        },
+        {
+          "question": "ما هو الدليل السريري على التدخلات النفسية؟",
+          "expected": "8.1.3",
+          "retrieved": [
+            "2.6.4",
+            "8.1",
+            "11.6",
+            "4.2.1",
+            "10.6.4"
+          ],
+          "top_score": 0.6895,
+          "found": false
+        },
+        {
+          "question": "ما هي توصيات الممارسة السريرية لمراقبة الصحة الجسدية؟",
+          "expected": "9.4.1",
+          "retrieved": [
+            "9.4.1",
+            "6.4.1",
+            "9.3.3",
+            "11.8",
+            "10.5.1"
+          ],
+          "top_score": 0.6262,
+          "found": true
+        },
+        {
+          "question": "ما الأدلة الاقتصادية الصحية بخصوص علاج الأطفال المصابين بثنائي القطب؟",
+          "expected": "10.4.5",
+          "retrieved": [
+            "10.3.6",
+            "10.7.3",
+            "9.3.3",
+            "10.4.5",
+            "4.3.3"
+          ],
+          "top_score": 0.596,
+          "found": true
+        },
+        {
+          "question": "ما هو خطر التحيز في الدراسات الخاصة بالأطفال واليافعين المصابين بثنائي القطب؟",
+          "expected": "10.3.4",
+          "retrieved": [
+            "6.3.5",
+            "7.4.4",
+            "8.1.3",
+            "10.3.3",
+            "10.7.2"
+          ],
+          "top_score": 0.6305,
+          "found": false
+        },
+        {
+          "question": "كيف تتم إدارة الهوس أو الهوس الخفيف لدى البالغين؟",
+          "expected": "11.5",
+          "retrieved": [
+            "11.5",
+            "6.2.1",
+            "10.7.2",
+            "8.1",
+            "6.6.1"
+          ],
+          "top_score": 0.563,
+          "found": true
+        },
+        {
+          "question": "كيف يجب استخدام الدواء لعلاج اضطراب ثنائي القطب؟",
+          "expected": "11.10",
+          "retrieved": [
+            "2.6.3",
+            "6.4.1",
+            "6.6.2",
+            "11.10",
+            "6.2.4"
+          ],
+          "top_score": 0.6397,
+          "found": true
+        }
+      ]
+    },
+    "10": {
+      "precision": 0.7895,
+      "correct": 15,
+      "total": 19,
+      "details": [
+        {
+          "question": "ما هي معايير تشخيص اضطراب ثنائي القطب؟",
+          "expected": "2.3.1",
+          "retrieved": [
+            "2.3.1",
+            "10.6.2",
+            "2.3.4",
+            "5.2.1",
+            "9.4.1",
+            "2.3.2",
+            "5.2.3",
+            "10.5.2",
+            "5.1",
+            "11.3"
+          ],
+          "top_score": 0.615,
+          "found": true
+        },
+        {
+          "question": "كيف يتم تمييز اضطراب ثنائي القطب عن التشخيصات الأخرى؟",
+          "expected": "2.3.3",
+          "retrieved": [
+            "10.6.2",
+            "2.3.1",
+            "5.2.3",
+            "2.3.3",
+            "5.5.1",
+            "2.3.5",
+            "2.5.2",
+            "2.3.2",
+            "5.3.3",
+            "2.1.3"
+          ],
+          "top_score": 0.6383,
+          "found": true
+        },
+        {
+          "question": "ما هي الأمراض المصاحبة المرتبطة باضطراب ثنائي القطب؟",
+          "expected": "2.3.5",
+          "retrieved": [
+            "2.2.1",
+            "2.2",
+            "2.1.3",
+            "2.3.5",
+            "10.6.2",
+            "2.3.1",
+            "6.2.1",
+            "2.5",
+            "2.3.2",
+            "2.5.2"
+          ],
+          "top_score": 0.4889,
+          "found": true
+        },
+        {
+          "question": "ما هي العلامات المبكرة لانتكاسة اضطراب ثنائي القطب؟",
+          "expected": "2.5.1",
+          "retrieved": [
+            "2.5.1",
+            "2.2.1",
+            "2.2.2",
+            "10.6.2",
+            "2.5.2",
+            "2.5.3",
+            "2.3.5",
+            "2.1.2",
+            "2.2",
+            "2.4"
+          ],
+          "top_score": 0.563,
+          "found": true
+        },
+        {
+          "question": "ما المعلومات المكتوبة التي يجب تقديمها لمقدمي الرعاية؟",
+          "expected": "1.1.14",
+          "retrieved": [
+            "1.1.14",
+            "4.2.2",
+            "4.1",
+            "1.1.16",
+            "4.3.2",
+            "1.1.13",
+            "4.3.1",
+            "11.4",
+            "4.4.1",
+            "4.3.3"
+          ],
+          "top_score": 0.5594,
+          "found": true
+        },
+        {
+          "question": "ما المحاور التي حددها مقدمو الرعاية لتحسين تجربتهم؟",
+          "expected": "4.2.2",
+          "retrieved": [
+            "4.1",
+            "4.2.2",
+            "4.3.2",
+            "1.1.18",
+            "4.2.1",
+            "11.4",
+            "6.6.1",
+            "4.3.1",
+            "1.1.14",
+            "5.4"
+          ],
+          "top_score": 0.6811,
+          "found": true
+        },
+        {
+          "question": "ماذا يجب أن يحدث مباشرة بعد تقييم المريض؟",
+          "expected": "5.4",
+          "retrieved": [
+            "5.4",
+            "5.2.3",
+            "8.2",
+            "11.4",
+            "6.5.2",
+            "6.5.4",
+            "5.5.1",
+            "4.3.2",
+            "5.3.3",
+            "11.2"
+          ],
+          "top_score": 0.5549,
+          "found": true
+        },
+        {
+          "question": "ما هي توصيات الممارسة السريرية لتحديد الحالات؟",
+          "expected": "5.6.1",
+          "retrieved": [
+            "6.4.1",
+            "11.4",
+            "6.6.1",
+            "6.5.4",
+            "6.4.5",
+            "4.2.2",
+            "10.6.4",
+            "10.5.1",
+            "9.2.2",
+            "9.4.1"
+          ],
+          "top_score": 0.5794,
+          "found": false
+        },
+        {
+          "question": "ما هو الدواء الموصى به لنوبة الهوس الحادة؟",
+          "expected": "6.1",
+          "retrieved": [
+            "2.6.3",
+            "6.2.1",
+            "6.2.4",
+            "11.5",
+            "6.1",
+            "6.4.1",
+            "6.6.2",
+            "6.6.1",
+            "7.4.1",
+            "7.5.2"
+          ],
+          "top_score": 0.6317,
+          "found": true
+        },
+        {
+          "question": "ماذا وجد التحليل التلوي الشبكي بخصوص التدخلات الدوائية؟",
+          "expected": "6.3.4",
+          "retrieved": [
+            "6.4.5",
+            "10.5.1",
+            "6.3.8",
+            "6.3.3",
+            "6.5.2",
+            "6.4.2",
+            "6.4.1",
+            "10.3.1",
+            "7.4.7",
+            "6.5.4"
+          ],
+          "top_score": 0.6008,
+          "found": false
+        },
+        {
+          "question": "ما هي التدخلات الغذائية التي تساعد في نوبات ثنائي القطب الحادة؟",
+          "expected": "6.3.7",
+          "retrieved": [
+            "9.3.5",
+            "6.4.1",
+            "9.3.2",
+            "9.3.1",
+            "9.3.3",
+            "10.3.1",
+            "10.5.1",
+            "6.2.1",
+            "10.5.2",
+            "6.3.7"
+          ],
+          "top_score": 0.4307,
+          "found": true
+        },
+        {
+          "question": "ما هي المفاضلة بين الفوائد والأضرار السريرية في الإدارة طويلة المدى؟",
+          "expected": "7.5.2",
+          "retrieved": [
+            "4.3.2",
+            "6.5.2",
+            "8.2",
+            "4.3.1",
+            "7.5.1",
+            "10.7.1",
+            "7.5.2",
+            "4.3.3",
+            "9.3.2",
+            "9.3.3"
+          ],
+          "top_score": 0.588,
+          "found": true
+        },
+        {
+          "question": "ما هي توصيات البحث للإدارة طويلة المدى لثنائي القطب؟",
+          "expected": "7.6.2",
+          "retrieved": [
+            "10.5.1",
+            "7.5.4",
+            "7.5.1",
+            "7.6.1",
+            "7.4.7",
+            "5.4",
+            "10.2.1",
+            "6.5.2",
+            "10.5.2",
+            "7.1"
+          ],
+          "top_score": 0.5695,
+          "found": false
+        },
+        {
+          "question": "ما هو الدليل السريري على التدخلات النفسية؟",
+          "expected": "8.1.3",
+          "retrieved": [
+            "2.6.4",
+            "8.1",
+            "11.6",
+            "4.2.1",
+            "10.6.4",
+            "9.2.2",
+            "4.2.2",
+            "6.1",
+            "11.3",
+            "11.5"
+          ],
+          "top_score": 0.6895,
+          "found": false
+        },
+        {
+          "question": "ما هي توصيات الممارسة السريرية لمراقبة الصحة الجسدية؟",
+          "expected": "9.4.1",
+          "retrieved": [
+            "9.4.1",
+            "6.4.1",
+            "9.3.3",
+            "11.8",
+            "10.5.1",
+            "6.6.1",
+            "11.4",
+            "9.3.1",
+            "10.3.1",
+            "6.4.2"
+          ],
+          "top_score": 0.6262,
+          "found": true
+        },
+        {
+          "question": "ما الأدلة الاقتصادية الصحية بخصوص علاج الأطفال المصابين بثنائي القطب؟",
+          "expected": "10.4.5",
+          "retrieved": [
+            "10.3.6",
+            "10.7.3",
+            "9.3.3",
+            "10.4.5",
+            "4.3.3",
+            "6.4.5",
+            "10.5.5",
+            "6.3.8",
+            "10.7.2",
+            "7.2.5"
+          ],
+          "top_score": 0.596,
+          "found": true
+        },
+        {
+          "question": "ما هو خطر التحيز في الدراسات الخاصة بالأطفال واليافعين المصابين بثنائي القطب؟",
+          "expected": "10.3.4",
+          "retrieved": [
+            "6.3.5",
+            "7.4.4",
+            "8.1.3",
+            "10.3.3",
+            "10.7.2",
+            "10.3.4",
+            "10.5.3",
+            "10.6.3",
+            "10.4.3",
+            "10.6.2"
+          ],
+          "top_score": 0.6305,
+          "found": true
+        },
+        {
+          "question": "كيف تتم إدارة الهوس أو الهوس الخفيف لدى البالغين؟",
+          "expected": "11.5",
+          "retrieved": [
+            "11.5",
+            "6.2.1",
+            "10.7.2",
+            "8.1",
+            "6.6.1",
+            "2.5.2",
+            "5.1",
+            "10.3.3",
+            "11.2",
+            "4.1"
+          ],
+          "top_score": 0.563,
+          "found": true
+        },
+        {
+          "question": "كيف يجب استخدام الدواء لعلاج اضطراب ثنائي القطب؟",
+          "expected": "11.10",
+          "retrieved": [
+            "2.6.3",
+            "6.4.1",
+            "6.6.2",
+            "11.10",
+            "6.2.4",
+            "6.1",
+            "9.2.2",
+            "6.3.7",
+            "7.5.2",
+            "7.1"
+          ],
+          "top_score": 0.6397,
+          "found": true
+        }
+      ]
+    }
+  },
+  "refusal_evaluation": {
+    "precision": 1.0,
+    "correct": 4,
+    "total": 4,
+    "details": [
+      {
+        "question": "What is the best pizza topping?",
+        "top_score": 0.1865,
+        "correctly_refused": true
+      },
+      {
+        "question": "How do I fix my car's brakes?",
+        "top_score": 0.1296,
+        "correctly_refused": true
+      },
+      {
+        "question": "What is the capital of France?",
+        "top_score": 0.1555,
+        "correctly_refused": true
+      },
+      {
+        "question": "Should I invest in cryptocurrency?",
+        "top_score": 0.1942,
+        "correctly_refused": true
+      }
+    ],
+    "threshold_used": 0.78
+  }
+}

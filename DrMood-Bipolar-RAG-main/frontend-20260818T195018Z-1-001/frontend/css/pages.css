@@ -1,0 +1,241 @@
+/* ===== Sidebar footer (language switch) ===== */
+
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: 14px;
+}
+
+.lang-switch {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, .18);
+    background: rgba(255, 255, 255, .06);
+    color: rgba(255, 255, 255, .85);
+    border-radius: 9px;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 11px;
+}
+
+.lang-switch:hover {
+    background: rgba(255, 255, 255, .14);
+}
+
+
+/* ===== Page header (Home / Info / Settings) ===== */
+
+.page-subtitle {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 6px;
+    max-width: 560px;
+    line-height: 1.6;
+}
+
+
+/* ===== Home hero / about card spacing ===== */
+
+.about-card {
+    margin-bottom: 16px;
+}
+
+.cta-button {
+    margin-top: 18px;
+    border: 0;
+    background: var(--sleepy-blue);
+    color: white;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.cta-button:hover {
+    background: var(--forest-green);
+}
+
+
+/* ===== Settings page ===== */
+
+.settings-card {
+    max-width: 640px;
+    padding: 6px 25px;
+}
+
+.settings-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.settings-row:last-child {
+    border-bottom: 0;
+}
+
+.settings-row h3 {
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.settings-row p {
+    font-size: 10.5px;
+    color: var(--muted);
+    max-width: 340px;
+    line-height: 1.6;
+}
+
+.toggle-pill {
+    flex: 0 0 auto;
+    width: 56px;
+    height: 28px;
+    border-radius: 20px;
+    border: 1px solid var(--line);
+    background: var(--cement);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6px;
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.toggle-knob {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--sleepy-blue);
+    transition: transform .2s ease;
+}
+
+body.dark-mode .toggle-knob {
+    transform: translateX(28px);
+}
+
+.lang-pill-group {
+    display: flex;
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    overflow: hidden;
+    flex: 0 0 auto;
+}
+
+.lang-pill {
+    border: 0;
+    background: white;
+    color: var(--muted);
+    padding: 8px 14px;
+    font-size: 11px;
+}
+
+.lang-pill.active {
+    background: var(--sleepy-blue);
+    color: white;
+}
+
+
+/* ===== Confidence badge (used by app.js) ===== */
+
+.confidence-badge {
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 9px;
+    color: var(--muted);
+    background: var(--cement);
+    padding: 3px 9px;
+    border-radius: 20px;
+}
+
+.download-pdf {
+    margin-inline-start: 8px;
+    background: none;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 10px;
+    cursor: pointer;
+    color: var(--muted);
+}
+
+.download-pdf:hover {
+    background: var(--cement);
+}
+
+
+/* ===== RTL support ===== */
+
+html[dir="rtl"] .message-name,
+html[dir="rtl"] .page-header,
+html[dir="rtl"] .about-card,
+html[dir="rtl"] .settings-row p,
+html[dir="rtl"] .source-row p {
+    text-align: right;
+}
+
+html[dir="rtl"] .user-message {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+html[dir="rtl"] .bubble {
+    border-radius: 13px 4px 13px 13px;
+}
+
+html[dir="rtl"] .user-message .bubble {
+    border-radius: 4px 13px 13px 13px;
+}
+
+html[dir="rtl"] .source-row,
+html[dir="rtl"] .history-row {
+    direction: rtl;
+}
+
+
+/* ===== Dark mode ===== */
+
+body.dark-mode {
+    --bg: #1E1220;
+    --white: #2B1A2E;
+    --text: #F6DBC0;
+    --muted: #C9A8BC;
+    --line: #45304A;
+    --cement: #3A2640;
+    --shadow: 0 10px 28px rgba(0, 0, 0, .35);
+}
+
+body.dark-mode .sidebar {
+    background: #12090F;
+}
+
+body.dark-mode .document {
+    background: #241729;
+    border-color: #45304A;
+}
+
+body.dark-mode .lang-pill {
+    background: var(--white);
+}
+
+body.dark-mode .role-switcher,
+body.dark-mode .icon-btn,
+body.dark-mode .close-drawer {
+    background: var(--white);
+    border-color: var(--line);
+}
+
+body.dark-mode .quick-question {
+    background: var(--white);
+    border-color: var(--line);
+}
+
+body.dark-mode .input-wrapper {
+    background: var(--white);
+    border-color: var(--line);
+}

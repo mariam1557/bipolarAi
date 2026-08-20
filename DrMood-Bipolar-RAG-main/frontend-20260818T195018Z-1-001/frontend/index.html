@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlRoot">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Mood — Bipolar Support</title>
+    <link rel="icon" href="assets/logo-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/redesign.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+
+<body>
+    <div class="app-shell">
+
+        <!-- ===== TOP NAVBAR ===== -->
+        <header class="topnav">
+            <div class="topnav-inner">
+                <button class="brand" data-view="home" id="brandLogo">
+                    <div class="brand-mark">
+                        <img src="assets/logo-icon.png" alt="Dr. Mood logo">
+                    </div>
+                    <div class="brand-text">
+                        <h1>Dr. Mood</h1>
+                        <span data-en="AI MENTAL HEALTH ASSISTANT" data-ar="مساعد ذكي للصحة النفسية">AI MENTAL HEALTH ASSISTANT</span>
+                    </div>
+                </button>
+
+                <nav class="topnav-links" id="topnavLinks">
+                    <button class="nav-link" data-view="home">
+                        <i class="fa-solid fa-house"></i>
+                        <span data-en="Home" data-ar="الرئيسية">Home</span>
+                    </button>
+                    <button class="nav-link active" data-view="chat">
+                        <i class="fa-regular fa-message"></i>
+                        <span data-en="Chat" data-ar="المحادثة">Chat</span>
+                    </button>
+                    <div class="nav-link history-nav-link" id="historyToggle">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <span data-en="History" data-ar="السجل">History</span>
+                        <i class="fa-solid fa-chevron-down history-chevron"></i>
+
+                        <div class="history-panel" id="historyPanel">
+                            <div class="history-panel-header" data-en="Your conversations" data-ar="محادثاتك">Your conversations</div>
+                            <div class="history-panel-body" id="historyPanelBody">
+                                <p class="history-empty" data-en="No conversations yet." data-ar="مفيش محادثات لسه.">No conversations yet.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="nav-link" data-view="info">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <span data-en="Info" data-ar="معلومات">Info</span>
+                    </button>
+                </nav>
+
+                <div class="topnav-actions">
+                    <button class="icon-btn" id="langSwitch" title="Language">
+                        <i class="fa-solid fa-globe"></i>
+                    </button>
+                    <button class="icon-btn" id="darkModeToggle" title="Toggle dark mode">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+
+                    <!-- Logged-out state -->
+                    <div class="auth-actions" id="authActionsLoggedOut">
+                        <button class="ghost-btn" data-view="login" data-en="Log in" data-ar="تسجيل الدخول">Log in</button>
+                        <button class="cta-button small" data-view="register" data-en="Sign up" data-ar="إنشاء حساب">Sign up</button>
+                    </div>
+
+                    <!-- Logged-in state -->
+                    <div class="user-menu" id="userMenu" hidden>
+                        <button class="user-avatar-btn" id="userAvatarBtn">
+                            <span class="user-avatar" id="userAvatarInitial">U</span>
+                            <span class="user-name" id="userNameLabel">User</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="user-dropdown" id="userDropdown">
+                            <div class="user-dropdown-email" id="userDropdownEmail">user@email.com</div>
+                            <button class="user-dropdown-item" id="logoutBtn">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                <span data-en="Log out" data-ar="تسجيل الخروج">Log out</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile dropdown menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <button class="nav-link" data-view="home"><i class="fa-solid fa-house"></i><span data-en="Home" data-ar="الرئيسية">Home</span></button>
+                <button class="nav-link" data-view="chat"><i class="fa-regular fa-message"></i><span data-en="Chat" data-ar="المحادثة">Chat</span></button>
+                <button class="nav-link" data-view="info"><i class="fa-solid fa-circle-info"></i><span data-en="Info" data-ar="معلومات">Info</span></button>
+                <div class="mobile-auth-actions" id="mobileAuthActions">
+                    <button class="ghost-btn" data-view="login" data-en="Log in" data-ar="تسجيل الدخول">Log in</button>
+                    <button class="cta-button small" data-view="register" data-en="Sign up" data-ar="إنشاء حساب">Sign up</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+
+            <!-- ===== HOME ===== -->
+            <section id="homeView" class="view">
+                <div class="hero">
+                    <div class="hero-text">
+                        <span class="hero-eyebrow" data-en="AI MENTAL HEALTH ASSISTANT" data-ar="مساعد ذكي للصحة النفسية">AI MENTAL HEALTH ASSISTANT</span>
+                        <h1 data-en="Understand bipolar disorder, one grounded answer at a time" data-ar="افهمي اضطراب ثنائي القطب بإجابات موثوقة، خطوة بخطوة">
+                            Understand bipolar disorder, one grounded answer at a time
+                        </h1>
+                        <p class="hero-subtitle" data-en="Dr. Mood is an AI assistant that explains bipolar disorder using approved clinical guidelines only — every answer is grounded in a real source, never a guess." data-ar="Dr. Mood مساعد ذكي بيشرح اضطراب ثنائي القطب معتمداً على مصادر إكلينيكية معتمدة بس — كل إجابة مبنية على مصدر حقيقي، مش تخمين.">
+                            Dr. Mood is an AI assistant that explains bipolar disorder using approved clinical guidelines only — every answer is grounded in a real source, never a guess.
+                        </p>
+                        <div class="hero-actions">
+                            <button class="cta-button" id="homeStartChat" data-en="Start a conversation" data-ar="ابدأي محادثة">Start a conversation</button>
+                            <button class="ghost-btn large" data-view="info" data-en="Learn about bipolar disorder" data-ar="اعرفي أكتر عن المرض">Learn about bipolar disorder</button>
+                        </div>
+                    </div>
+                    <div class="hero-media">
+                        <img src="assets/hero-illustration.svg" alt="Illustration of mood balance and AI-supported mental health care">
+                    </div>
+                </div>
+
+                <div class="simple-card about-card">
+                    <div class="about-icon"><i class="fa-solid fa-book-medical"></i></div>
+                    <h3 data-en="What Dr. Mood does" data-ar="Dr. Mood بيعمل إيه">What Dr. Mood does</h3>
+                    <p data-en="Dr. Mood answers questions about bipolar disorder — symptoms, diagnosis, course, and general management — using excerpts from the NICE CG185 clinical guideline. Every answer is grounded in a real source you can open and read yourself, and the assistant will tell you honestly when it can't find a good enough answer instead of guessing."
+                        data-ar="Dr. Mood بيجاوب على أسئلة عن اضطراب ثنائي القطب — الأعراض، التشخيص، مسار المرض، والإدارة العامة — باستخدام مقتطفات من دليل NICE CG185 الإكلينيكي. كل إجابة مبنية على مصدر حقيقي تقدر تفتحه وتقراه بنفسك، والمساعد بيقولك بصراحة لما ميلاقيش إجابة كفاية بدل ما يخمّن.">
+                        Dr. Mood answers questions about bipolar disorder — symptoms, diagnosis, course, and general management — using excerpts from the NICE CG185 clinical guideline. Every answer is grounded in a real source you can open and read yourself, and the assistant
+                        will tell you honestly when it can't find a good enough answer instead of guessing.
+                    </p>
+                </div>
+
+                <div class="source-list">
+                    <div class="source-row">
+                        <div class="source-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <div>
+                            <h3 data-en="Evidence-based answers" data-ar="إجابات مبنية على مصادر">Evidence-based answers</h3>
+                            <p data-en="Every response is grounded in real guideline excerpts, with a confidence level shown alongside the evidence." data-ar="كل رد مبني على مقتطفات حقيقية من الدليل، مع مستوى ثقة موضح جمب الأدلة.">
+                                Every response is grounded in real guideline excerpts, with a confidence level shown alongside the evidence.
+                            </p>
+                        </div>
+                        <span data-en="Retrieval" data-ar="استرجاع">Retrieval</span>
+                    </div>
+
+                    <div class="source-row">
+                        <div class="source-icon"><i class="fa-solid fa-quote-right"></i></div>
+                        <div>
+                            <h3 data-en="Numbered citations" data-ar="استشهادات مرقّمة">Numbered citations</h3>
+                            <p data-en="Click any [1] [2] in an answer to jump straight to that source in the evidence panel." data-ar="دوسي على أي [1] [2] في الرد عشان تروحي للمصدر بتاعه في لوحة الأدلة مباشرة.">
+                                Click any [1] [2] in an answer to jump straight to that source in the evidence panel.
+                            </p>
+                        </div>
+                        <span data-en="Grounding" data-ar="استناد">Grounding</span>
+                    </div>
+
+                    <div class="source-row">
+                        <div class="source-icon"><i class="fa-solid fa-language"></i></div>
+                        <div>
+                            <h3 data-en="Bilingual by design" data-ar="بيتكلم عربي وإنجلش">Bilingual by design</h3>
+                            <p data-en="Ask in Arabic or English — Dr. Mood searches the source material and replies in the same language." data-ar="اسألي بالعربي أو الإنجليزي — Dr. Mood بيدور في المصادر ويرد بنفس اللغة.">
+                                Ask in Arabic or English — Dr. Mood searches the source material and replies in the same language.
+                            </p>
+                        </div>
+                        <span data-en="Language" data-ar="لغة">Language</span>
+                    </div>
+
+                    <div class="source-row">
+                        <div class="source-icon"><i class="fa-solid fa-user-doctor"></i></div>
+                        <div>
+                            <h3 data-en="Patient / Doctor modes" data-ar="وضع مريض / دكتور">Patient / Doctor modes</h3>
+                            <p data-en="Switch tone and terminology depending on who's asking, right from the chat header." data-ar="بدّلي اللهجة والمصطلحات حسب اللي بيسأل، من فوق شاشة الشات مباشرة.">
+                                Switch tone and terminology depending on who's asking, right from the chat header.
+                            </p>
+                        </div>
+                        <span data-en="Roles" data-ar="أدوار">Roles</span>
+                    </div>
+
+                    <div class="source-row">
+                        <div class="source-icon"><i class="fa-solid fa-shield-heart"></i></div>
+                        <div>
+                            <h3 data-en="Built-in safety net" data-ar="شبكة أمان مدمجة">Built-in safety net</h3>
+                            <p data-en="If a message shows signs of crisis, Dr. Mood responds with care and points to real support instead of general facts." data-ar="لو رسالة فيها علامات أزمة، Dr. Mood بيرد بحرص وبيوجّه لدعم حقيقي بدل معلومات عامة.">
+                                If a message shows signs of crisis, Dr. Mood responds with care and points to real support instead of general facts.
+                            </p>
+                        </div>
+                        <span data-en="Safety" data-ar="أمان">Safety</span>
+                    </div>
+
+                    <div class="source-row">
+                        <div class="source-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                        <div>
+                            <h3 data-en="Your history, saved" data-ar="سجلك محفوظ">Your history, saved</h3>
+                            <p data-en="Log in and every conversation is saved to your account, so you can pick up where you left off." data-ar="سجّلي دخول وكل محادثة بتتحفظ على حسابك، عشان ترجعيلها في أي وقت.">
+                                Log in and every conversation is saved to your account, so you can pick up where you left off.
+                            </p>
+                        </div>
+                        <span data-en="Account" data-ar="حساب">Account</span>
+                    </div>
+                </div>
+
+                <button class="cta-button" id="homeStartChat2" data-en="Start a conversation" data-ar="ابدأي محادثة">
+                    Start a conversation
+                </button>
+            </section>
+
+            <!-- ===== CHAT ===== -->
+            <section id="chatView" class="view active-view">
+                <header class="chat-header">
+                    <div class="assistant-info">
+                        <div class="assistant-avatar">
+                            <img src="assets/logo-icon.png" alt="Dr. Mood">
+                        </div>
+                        <div>
+                            <h2>Dr. Mood</h2>
+                            <p><span class="online-dot"></span>
+                                <span data-en="Evidence-based bipolar support" data-ar="دعم مبني على مصادر معتمدة">Evidence-based bipolar support</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="header-actions">
+                        <div class="role-switcher">
+                            <button class="role-btn active" data-role="patient">
+                                <i class="fa-solid fa-user"></i>
+                                <span data-en="Patient" data-ar="مريض">Patient</span>
+                            </button>
+                            <button class="role-btn" data-role="doctor">
+                                <i class="fa-solid fa-user-doctor"></i>
+                                <span data-en="Doctor" data-ar="دكتور">Doctor</span>
+                            </button>
+                        </div>
+
+                        <button class="icon-btn" id="newChatBtn" title="New chat">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+
+                        <button class="icon-btn" id="evidenceToggle" title="Show evidence">
+                            <i class="fa-solid fa-file-medical"></i>
+                        </button>
+                    </div>
+                </header>
+
+                <div class="chat-layout">
+
+                    <div class="chat-panel">
+                        <div class="chat-messages" id="chatMessages">
+
+                            <div class="message assistant-message">
+                                <div class="message-avatar">
+                                    <img src="assets/logo-icon.png" alt="Dr. Mood">
+                                </div>
+                                <div class="message-content">
+                                    <span class="message-name">Dr. Mood</span>
+                                    <div class="bubble">
+                                        <span data-en="Hello! I can help you understand bipolar disorder using information from the approved clinical resources." data-ar="أهلاً بيك! أقدر أساعدك تفهمي اضطراب ثنائي القطب باستخدام معلومات من المصادر الإكلينيكية المعتمدة.">
+                      Hello! I can help you understand bipolar disorder using information
+                      from the approved clinical resources.
+                    </span>
+                                        <div class="quick-actions">
+                                            <button class="quick-question">What is bipolar disorder?</button>
+                                            <button class="quick-question">What are manic symptoms?</button>
+                                            <button class="quick-question">What is hypomania?</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="chat-input-area">
+                            <div class="rate-limit-banner" id="rateLimitBanner" hidden>
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                <span id="rateLimitText"></span>
+                            </div>
+                            <div class="login-required-banner" id="loginRequiredBanner" hidden>
+                                <i class="fa-solid fa-circle-info"></i>
+                                <span data-en="You're chatting as a guest — this conversation won't be saved. Log in to keep your history." data-ar="إنتِ بتتكلمي كزائرة — المحادثة دي مش هتتحفظ. سجّلي دخول عشان يتحفظلك السجل.">You're chatting as a guest — this conversation won't be saved. Log in to keep your history.</span>
+                                <button class="cta-button small" data-view="login" data-en="Log in" data-ar="تسجيل الدخول">Log in</button>
+                            </div>
+                            <div class="input-wrapper" id="inputWrapper">
+                                <textarea id="questionInput" rows="1" placeholder="Ask a question about bipolar disorder..."></textarea>
+                                <button id="askBtn" class="send-btn" title="Send">
+                  <i class="fa-solid fa-arrow-up"></i>
+                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hidden evidence drawer -->
+                    <aside class="evidence-drawer" id="evidenceDrawer">
+                        <div class="drawer-header">
+                            <div>
+                                <span class="eyebrow">EVIDENCE</span>
+                                <h3 data-en="Supporting sources" data-ar="المصادر الداعمة">Supporting sources</h3>
+                            </div>
+                            <button class="close-drawer" id="closeEvidence" title="Close evidence">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+                        </div>
+
+                        <div class="confidence-row" id="confidenceRow" hidden>
+                            <span data-en="Confidence" data-ar="مستوى الثقة">Confidence</span>
+                            <span class="confidence-value" id="confidenceValue">—</span>
+                        </div>
+
+                        <div class="drawer-body" id="drawerBody">
+                            <p class="drawer-placeholder" data-en="Ask a question to see supporting sources here." data-ar="اسألي سؤال عشان تشوفي المصادر الداعمة هنا.">
+                                Ask a question to see supporting sources here.
+                            </p>
+                        </div>
+                    </aside>
+
+                </div>
+            </section>
+
+            <!-- ===== INFO ===== -->
+            <section id="infoView" class="view">
+                <div class="page-header">
+                    <h2 data-en="Bipolar disorder & this project" data-ar="اضطراب ثنائي القطب وهذا المشروع">Bipolar disorder & this project</h2>
+                    <p class="page-subtitle" data-en="Clear, sourced information about the condition, and what Dr. Mood is built on." data-ar="معلومات واضحة وموثقة عن المرض، وDr. Mood مبني على إيه.">
+                        Clear, sourced information about the condition, and what Dr. Mood is built on.
+                    </p>
+                </div>
+
+                <div class="info-grid">
+                    <div class="simple-card info-card">
+                        <div class="about-icon"><i class="fa-solid fa-brain"></i></div>
+                        <h3 data-en="What is bipolar disorder?" data-ar="ما هو اضطراب ثنائي القطب؟">What is bipolar disorder?</h3>
+                        <p data-en="Bipolar disorder is a mental health condition marked by extreme shifts in mood, energy, and activity levels — swinging between emotional highs (mania or hypomania) and lows (depression). These aren't ordinary mood changes; episodes can last days to months and affect sleep, judgement, and daily functioning." data-ar="اضطراب ثنائي القطب هو حالة نفسية بتتميز بتقلبات شديدة في المزاج والطاقة ومستوى النشاط — بين حالات ابتهاج شديد (هوس أو هوس خفيف) وحالات اكتئاب. مش تقلبات مزاج عادية؛ النوبة ممكن تستمر من أيام لشهور وتأثر على النوم والقدرة على اتخاذ القرار والحياة اليومية.">
+                            Bipolar disorder is a mental health condition marked by extreme shifts in mood, energy, and activity levels — swinging between emotional highs (mania or hypomania) and lows (depression). These aren't ordinary mood changes; episodes can last days to months and affect sleep, judgement, and daily functioning.
+                        </p>
+                    </div>
+
+                    <div class="simple-card info-card">
+                        <div class="about-icon"><i class="fa-solid fa-layer-group"></i></div>
+                        <h3 data-en="Types of bipolar disorder" data-ar="أنواع اضطراب ثنائي القطب">Types of bipolar disorder</h3>
+                        <p data-en="Bipolar I involves at least one full manic episode, often with depressive episodes too. Bipolar II involves hypomanic episodes (less severe than mania) alternating with major depressive episodes. Cyclothymic disorder involves numerous milder mood swings over at least two years that don't meet the full criteria for mania or major depression." data-ar="النوع الأول بيتضمن نوبة هوس كاملة على الأقل، وغالباً بتترافق مع نوبات اكتئاب. النوع الثاني بيتضمن نوبات هوس خفيف (أقل شدة من الهوس) بالتبادل مع نوبات اكتئاب شديد. اضطراب المزاج الدوري بيتضمن تقلبات مزاج أخف بشكل متكرر لمدة سنتين على الأقل من غير ما توصل لمعايير الهوس أو الاكتئاب الشديد.">
+                            Bipolar I involves at least one full manic episode, often with depressive episodes too. Bipolar II involves hypomanic episodes (less severe than mania) alternating with major depressive episodes. Cyclothymic disorder involves numerous milder mood swings over at least two years that don't meet the full criteria for mania or major depression.
+                        </p>
+                    </div>
+
+                    <div class="simple-card info-card">
+                        <div class="about-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <h3 data-en="Signs of mania & hypomania" data-ar="علامات الهوس والهوس الخفيف">Signs of mania & hypomania</h3>
+                        <p data-en="Unusually elevated or irritable mood, inflated self-esteem, decreased need for sleep, rapid speech, racing thoughts, distractibility, increased goal-directed activity, and risky behaviour (spending, impulsive decisions). Mania is severe enough to disrupt daily life or require hospitalisation; hypomania is milder and shorter." data-ar="مزاج مرتفع أو سريع الانفعال بشكل غير معتاد، ثقة مبالغ فيها بالنفس، قلة الحاجة للنوم، كلام سريع، أفكار متسارعة، تشتت سهل، زيادة النشاط الموجه لهدف، وسلوكيات خطرة (إنفاق، قرارات متهورة). الهوس شديد كفاية إنه يعطل الحياة اليومية أو يستدعي دخول المستشفى؛ الهوس الخفيف أخف وأقصر.">
+                            Unusually elevated or irritable mood, inflated self-esteem, decreased need for sleep, rapid speech, racing thoughts, distractibility, increased goal-directed activity, and risky behaviour (spending, impulsive decisions). Mania is severe enough to disrupt daily life or require hospitalisation; hypomania is milder and shorter.
+                        </p>
+                    </div>
+
+                    <div class="simple-card info-card">
+                        <div class="about-icon"><i class="fa-solid fa-cloud-rain"></i></div>
+                        <h3 data-en="Signs of depressive episodes" data-ar="علامات نوبة الاكتئاب">Signs of depressive episodes</h3>
+                        <p data-en="Persistent low mood, loss of interest or pleasure, fatigue, feelings of worthlessness or guilt, difficulty concentrating, changes in sleep or appetite, and in severe cases, thoughts of death or suicide. If these thoughts occur, reaching out for immediate support is essential." data-ar="مزاج منخفض مستمر، فقدان الاهتمام أو المتعة، إرهاق، مشاعر انعدام القيمة أو الذنب، صعوبة التركيز، تغيرات في النوم أو الشهية، وفي الحالات الشديدة، أفكار عن الموت أو الانتحار. لو ظهرت أفكار زي دي، التواصل مع دعم فوري أمر ضروري.">
+                            Persistent low mood, loss of interest or pleasure, fatigue, feelings of worthlessness or guilt, difficulty concentrating, changes in sleep or appetite, and in severe cases, thoughts of death or suicide. If these thoughts occur, reaching out for immediate support is essential.
+                        </p>
+                    </div>
+
+                    <div class="simple-card info-card">
+                        <div class="about-icon"><i class="fa-solid fa-dna"></i></div>
+                        <h3 data-en="Causes & risk factors" data-ar="الأسباب وعوامل الخطر">Causes & risk factors</h3>
+                        <p data-en="The exact cause isn't fully understood, but research points to a combination of genetics (having a close relative with bipolar disorder increases risk), brain structure and chemistry, and environmental triggers such as major stress, sleep disruption, or substance use." data-ar="السبب الدقيق مش معروف بشكل كامل، بس الأبحاث بتشير لمجموعة عوامل: الوراثة (وجود قريب مصاب بيزود الاحتمالية)، وتركيب وكيمياء المخ، ومحفزات بيئية زي الضغط النفسي الشديد أو اضطراب النوم أو تعاطي مواد.">
+                            The exact cause isn't fully understood, but research points to a combination of genetics (having a close relative with bipolar disorder increases risk), brain structure and chemistry, and environmental triggers such as major stress, sleep disruption, or substance use.
+                        </p>
+                    </div>
+
+                    <div class="simple-card info-card">
+                        <div class="about-icon"><i class="fa-solid fa-stethoscope"></i></div>
+                        <h3 data-en="Diagnosis & treatment" data-ar="التشخيص والعلاج">Diagnosis & treatment</h3>
+                        <p data-en="Diagnosis is made by a mental health professional based on history and symptom patterns over time — there's no single lab test. Treatment usually combines mood-stabilising or other medication, psychotherapy (like CBT), lifestyle routines (sleep, stress management), and ongoing monitoring. It is a manageable, long-term condition with the right care." data-ar="التشخيص بيتم بمعرفة متخصص صحة نفسية بناءً على التاريخ المرضي ونمط الأعراض بمرور الوقت — مفيش تحليل معملي واحد بيحدده. العلاج غالباً بيجمع بين أدوية مثبتة للمزاج أو أدوية تانية، علاج نفسي (زي العلاج السلوكي المعرفي)، روتين حياة صحي (نوم، إدارة ضغط)، ومتابعة مستمرة. هو حالة قابلة للإدارة على المدى الطويل مع الرعاية المناسبة.">
+                            Diagnosis is made by a mental health professional based on history and symptom patterns over time — there's no single lab test. Treatment usually combines mood-stabilising or other medication, psychotherapy (like CBT), lifestyle routines (sleep, stress management), and ongoing monitoring. It is a manageable, long-term condition with the right care.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="page-header info-section-header">
+                    <h2 data-en="About this project" data-ar="عن المشروع">About this project</h2>
+                </div>
+
+                <div class="simple-card about-card">
+                    <div class="about-icon"><i class="fa-solid fa-file-shield"></i></div>
+                    <h3 data-en="Source material" data-ar="مصدر المعلومات">Source material</h3>
+                    <p data-en="All clinical content comes from the NICE CG185 Bipolar Disorder guideline. Dr. Mood does not answer from general knowledge — if the guideline doesn't cover something, it says so." data-ar="كل المحتوى الإكلينيكي جاي من دليل NICE CG185 لاضطراب ثنائي القطب. Dr. Mood مبيجاوبش من معرفة عامة — لو الدليل مش بيغطي حاجة، بيقول كده بصراحة.">
+                        All clinical content comes from the NICE CG185 Bipolar Disorder guideline. Dr. Mood does not answer from general knowledge — if the guideline doesn't cover something, it says so.
+                    </p>
+                </div>
+
+                <div class="simple-card about-card">
+                    <div class="about-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                    <h3 data-en="Not a substitute for care" data-ar="مش بديل عن رعاية طبية">Not a substitute for care</h3>
+                    <p data-en="This tool is educational. It does not diagnose, prescribe, or adjust treatment. Always speak with a licensed clinician about your own care." data-ar="الأداة دي تعليمية. مش بتشخّص ولا بتوصف علاج ولا بتعدّل خطة علاج. دايماً كلمي طبيب مرخّص بخصوص حالتك.">
+                        This tool is educational. It does not diagnose, prescribe, or adjust treatment. Always speak with a licensed clinician about your own care.
+                    </p>
+                </div>
+
+                <div class="simple-card about-card crisis-card">
+                    <div class="about-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3 data-en="In a crisis?" data-ar="بتمري بأزمة؟">In a crisis?</h3>
+                    <p data-en="If you or someone you know is in danger or thinking about suicide, contact your local emergency services or a crisis line right now, or reach out to someone you trust." data-ar="لو إنتِ أو حد بتعرفيه في خطر أو بيفكر في الانتحار، كلمي خدمات الطوارئ في منطقتك أو خط أزمات حالاً، أو كلمي حد بتثقي فيه.">
+                        If you or someone you know is in danger or thinking about suicide, contact your local emergency services or a crisis line right now, or reach out to someone you trust.
+                    </p>
+                </div>
+            </section>
+
+            <!-- ===== LOGIN ===== -->
+            <section id="loginView" class="view auth-view">
+                <div class="auth-card">
+                    <div class="brand-mark auth-logo">
+                        <img src="assets/logo-icon.png" alt="Dr. Mood logo">
+                    </div>
+                    <h2 data-en="Welcome back" data-ar="أهلاً بعودتك">Welcome back</h2>
+                    <p class="page-subtitle" data-en="Log in to continue your conversations with Dr. Mood." data-ar="سجّلي دخول عشان تكملي محادثاتك مع Dr. Mood.">Log in to continue your conversations with Dr. Mood.</p>
+
+                    <div id="googleLoginBtnLogin" class="google-btn-slot"></div>
+                    <div class="auth-divider"><span data-en="or" data-ar="أو">or</span></div>
+
+                    <form id="loginForm" class="auth-form">
+                        <label data-en="Email" data-ar="البريد الإلكتروني">Email</label>
+                        <input type="email" id="loginEmail" required autocomplete="email">
+                        <label data-en="Password" data-ar="كلمة المرور">Password</label>
+                        <input type="password" id="loginPassword" required autocomplete="current-password">
+                        <p class="auth-error" id="loginError" hidden></p>
+                        <button type="submit" class="cta-button full" data-en="Log in" data-ar="تسجيل الدخول">Log in</button>
+                    </form>
+
+                    <p class="auth-switch" data-en="Don't have an account?" data-ar="معندكيش حساب؟">
+                        Don't have an account?
+                        <button class="link-btn" data-view="register" data-en="Sign up" data-ar="إنشاء حساب">Sign up</button>
+                    </p>
+                </div>
+            </section>
+
+            <!-- ===== REGISTER ===== -->
+            <section id="registerView" class="view auth-view">
+                <div class="auth-card">
+                    <div class="brand-mark auth-logo">
+                        <img src="assets/logo-icon.png" alt="Dr. Mood logo">
+                    </div>
+                    <h2 data-en="Create your account" data-ar="اعملي حسابك">Create your account</h2>
+                    <p class="page-subtitle" data-en="Save your conversation history and pick up where you left off." data-ar="احفظي سجل محادثاتك وارجعيله وقت ما تحبي.">Save your conversation history and pick up where you left off.</p>
+
+                    <div id="googleLoginBtnRegister" class="google-btn-slot"></div>
+                    <div class="auth-divider"><span data-en="or" data-ar="أو">or</span></div>
+
+                    <form id="registerForm" class="auth-form">
+                        <label data-en="Name" data-ar="الاسم">Name</label>
+                        <input type="text" id="registerName" autocomplete="name">
+                        <label data-en="Email" data-ar="البريد الإلكتروني">Email</label>
+                        <input type="email" id="registerEmail" required autocomplete="email">
+                        <label data-en="Password" data-ar="كلمة المرور">Password</label>
+                        <input type="password" id="registerPassword" required minlength="8" autocomplete="new-password">
+                        <p class="auth-error" id="registerError" hidden></p>
+                        <button type="submit" class="cta-button full" data-en="Create account" data-ar="إنشاء الحساب">Create account</button>
+                    </form>
+
+                    <p class="auth-switch" data-en="Already have an account?" data-ar="عندك حساب بالفعل؟">
+                        Already have an account?
+                        <button class="link-btn" data-view="login" data-en="Log in" data-ar="تسجيل الدخول">Log in</button>
+                    </p>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+pypdf==5.1.0
+sentence-transformers==3.3.1
+chromadb
+google-genai==0.3.0
+python-dotenv==1.0.1
+openpyxl==3.1.5
+pandas

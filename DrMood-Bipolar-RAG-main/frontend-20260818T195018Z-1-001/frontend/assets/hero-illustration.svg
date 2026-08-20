@@ -1,0 +1,88 @@
+<svg viewBox="0 0 900 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract illustration representing mood balance in bipolar disorder">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#487984"/>
+      <stop offset="100%" stop-color="#6A7C5F"/>
+    </linearGradient>
+    <linearGradient id="waveGrad1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C6D9DB"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+    <linearGradient id="waveGrad2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C3CEBD"/>
+      <stop offset="100%" stop-color="#EAE1D6"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="900" height="640" rx="28" fill="url(#bgGrad)"/>
+  <rect width="900" height="640" rx="28" fill="url(#glow)"/>
+
+  <!-- soft floating circles -->
+  <circle cx="120" cy="110" r="46" fill="#ffffff" opacity="0.08"/>
+  <circle cx="800" cy="540" r="70" fill="#ffffff" opacity="0.07"/>
+  <circle cx="770" cy="90" r="26" fill="#ffffff" opacity="0.12"/>
+
+  <!-- mood wave: rises into mania, dips into depression, settles into balance -->
+  <path d="M 60 430
+           C 150 430, 170 240, 250 220
+           C 330 200, 350 340, 430 350
+           C 500 358, 520 470, 600 460
+           C 680 450, 700 300, 780 300
+           C 830 300, 840 340, 850 340"
+        fill="none" stroke="url(#waveGrad1)" stroke-width="7" stroke-linecap="round" opacity="0.95"/>
+
+  <path d="M 60 470
+           C 160 470, 190 380, 260 370
+           C 340 358, 360 430, 440 432
+           C 510 434, 530 500, 610 494
+           C 690 488, 710 400, 790 400"
+        fill="none" stroke="url(#waveGrad2)" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
+
+  <!-- baseline -->
+  <line x1="60" y1="450" x2="850" y2="450" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1.5" stroke-dasharray="2 8"/>
+
+  <!-- small nodes marking states along the wave -->
+  <g>
+    <circle cx="250" cy="220" r="7" fill="#ffffff"/>
+    <circle cx="600" cy="460" r="7" fill="#ffffff"/>
+    <circle cx="430" cy="350" r="6" fill="#ffffff" opacity="0.85"/>
+    <circle cx="780" cy="300" r="6" fill="#ffffff" opacity="0.85"/>
+  </g>
+
+  <!-- head silhouette, right side, holding the wave -->
+  <g opacity="0.95">
+    <path d="M560 250
+             c 0 -55 45 -95 100 -95
+             c 58 0 104 42 104 100
+             c 0 34 -16 55 -16 78
+             l 0 42
+             c 0 14 -10 24 -24 24
+             l -18 0
+             l 0 34
+             c 0 10 -8 18 -18 18
+             l -40 0
+             c -12 0 -20 -10 -20 -22
+             l 0 -30
+             c -30 -14 -68 -55 -68 -149 z"
+          fill="#ffffff" fill-opacity="0.14" stroke="#ffffff" stroke-opacity="0.65" stroke-width="2.5"/>
+  </g>
+
+  <!-- circuit / neural dots inside the head, representing thoughtful AI support -->
+  <g stroke="#ffffff" stroke-opacity="0.55" stroke-width="1.5" fill="#ffffff" fill-opacity="0.85">
+    <circle cx="640" cy="220" r="4"/>
+    <circle cx="670" cy="245" r="4"/>
+    <circle cx="650" cy="275" r="4"/>
+    <circle cx="690" cy="290" r="4"/>
+    <line x1="640" y1="220" x2="670" y2="245"/>
+    <line x1="670" y1="245" x2="650" y2="275"/>
+    <line x1="650" y1="275" x2="690" y2="290"/>
+  </g>
+
+  <!-- small heart, representing care -->
+  <path d="M300 520 c -10 -14 -34 -10 -34 10 c 0 18 34 34 34 34 c 0 0 34 -16 34 -34 c 0 -20 -24 -24 -34 -10 z"
+        fill="#ffffff" opacity="0.5"/>
+</svg>
